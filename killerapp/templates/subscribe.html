@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block navbar %}
+	<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <div class="container">
+			<div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" id="mainheading" href="#page-top">Spoiler Attacks</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li id="navbartext">
+                        <a class="page-scroll" href="/#services">What We Do</a>
+                    </li>
+                    <li id="navbartext">
+                        <a class="page-scroll" href="/#portfolio">Shows List</a>
+                    </li>
+                    <li id="navbartext">
+                        <a class="page-scroll" href="/#contact">Suggestions</a>
+                    </li>
+                </ul>
+            </div>
+      	</div>
+    </nav>
+{% endblock %}
+{% block body %}
+<div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-centered">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" >
+                            <h1>Subscribe</h1>
+                        </div>
+                    <form action="" method="POST">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user blue"></i></span>
+                                <input type="text" name="InputName" placeholder="Name" class="form-control" autofocus="autofocus" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope blue"></i></span>
+                                <input type="email" name="InputEmail" placeholder="Email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone blue"></i></span>
+                                <input type="number" name="InputCno" placeholder="Phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-comment blue"></i></span>
+                                <textarea name="InputMessage" rows="6" class="form-control" type="text" required></textarea>
+                            </div>
+                        </div>
+                        <div class="">
+                        <button type="submit" class="btn btn-info pull-right">Send <span class="glyphicon glyphicon-send"></span></button>
+                            <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

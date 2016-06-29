@@ -7,6 +7,15 @@ body, div, a {
 
 	font-family: 'Creepster', cursive;
 	font-size: 40px;
+	color: white;
+	
+}
+
+#mainheadingsubscribe {
+
+	font-family: 'Creepster', cursive;
+	font-size: 40px;
+	color: red;
 	
 }
 
@@ -16,3 +25,61 @@ body, div, a {
 	font-size: 60px;
 }
 
+#buttontext {
+
+	font-family: 'Creepster', cursive;
+	font-size: 30px;
+}
+
+#navbar-default{
+	background-color:#222;
+	border-color:transparent
+}
+
+/*subscribe css*/
+h1 {
+    text-align:center;
+    font-size: 28px;
+    font-family: 'Lobster', cursive;
+}
+/*panel align center*/
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    padding-top:75px;
+}
+/*property for the bootstrap panel*/
+.panel  {
+-webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.panel-default > .panel-heading {
+  color: #000 !important;
+  background: #222; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #222, #ffffff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #222, #ffffff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #222, #ffffff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #222, #ffffff); /* Standard syntax */
+  border-color: #99ccff !important;
+  height:80px;
+}
+
+/*property for the HTML input placeholder*/
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+/*property for reset button*/
+button[type="reset"]    {
+    background-color:transparent;
+    border:1px solid black;
+}
+
+/*Glyphicon color*/
+.blue   {
+    color: #80bfff;
+}
