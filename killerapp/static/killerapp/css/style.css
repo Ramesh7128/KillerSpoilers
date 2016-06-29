@@ -6,10 +6,13 @@ body, div, a {
 #mainheading {
 
 	font-family: 'Creepster', cursive;
+	font-size: 40px;
 	
 }
 
-#navbarstyle {
+#maintagline {
 
-	color: '#000';
+	font-family: 'Creepster', cursive;
+	font-size: 60px;
 }
+
