@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block navbar %}
-	<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+	<nav class="navbar navbar-default navbar-fixed-top navbar-blink">
         <div class="container">
 			<div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -41,35 +41,47 @@
                         <div class="panel-heading" >
                             <h1>Subscribe</h1>
                         </div>
+
+  
                     <form action="" method="POST">
+                   	{% csrf_token %}
                     <div class="panel-body">
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user blue"></i></span>
-                                <input type="text" name="InputName" placeholder="Name" class="form-control" autofocus="autofocus" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope blue"></i></span>
-                                <input type="email" name="InputEmail" placeholder="Email" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone blue"></i></span>
-                                <input type="number" name="InputCno" placeholder="Phone" class="form-control" required>
+                                <input type="text" name="InputName" placeholder="Victims Name" class="form-control" autofocus="autofocus" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-comment blue"></i></span>
-                                <textarea name="InputMessage" rows="6" class="form-control" type="text" required></textarea>
+                                <select name="InputTvshow" class="form-control" required>
+                                	<option value="">Select a Tv show</option>
+									<option value="mrrobot">MrRobot</option>
+									<option value="houseofcards">House of Cards</option>
+									<option value="Preacher">Preacher</option>
+								</select>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone blue"></i></span>
+                                <input type="number" name="Inputphno" placeholder="Victims Phone" class="form-control" required>
+                            </div>
+                        </div>
+                        
                         <div class="">
-                        <button type="submit" class="btn btn-info pull-right">Send <span class="glyphicon glyphicon-send"></span></button>
-                            <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+                  
+						<script
+						    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+						    data-key="pk_test_9FcfYrvn3SykO0JOsHqbQjfu"
+						    data-amount="100"
+						    data-name="Ramesh Ravi"
+						    data-description="Widget"
+						    data-image="/img/documentation/checkout/marketplace.png"
+						    data-locale="auto">
+						</script>
+                        <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
                         </div>
                     </div>
                     </form>
@@ -78,3 +90,33 @@
         </div>
     </div>
 {% endblock %}
+
+{% block footer %}
+    <footer>
+        <div class="container" id="footerbottom">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
