@@ -6,11 +6,12 @@ phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number mus
 
 # Create your models here.
 
-class SpoilerVictims(models.Model):
+class SpoilerVictim(models.Model):
 
 	name = models.CharField(max_length=100, blank=False, null=False)
 	tvshow = models.CharField(max_length=100,blank=False, null=False)
 	phoneno = models.CharField(max_length=15, validators=[phone_regex], blank=False, null=False)
+	status = models.BooleanField(default=True)
 
 	def __unicode__(self):
 		if self.name and self.tvshow:
