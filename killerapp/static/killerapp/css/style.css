@@ -59,11 +59,11 @@ body, div, a {
    
 }
 
-.headingfont {
+/*.headingfont {
    font-family: 'Bungee Shade', cursive;
    font-size: 50px;  
 }
-
+*/
 /*@media only screen and (max-device-width: 480px) {
    define mobile specific styles come here 
   #buttontext { 
