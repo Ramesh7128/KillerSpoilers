@@ -36,7 +36,10 @@ def subscribe(request):
 				context['successful'] = True
 			except stripe.error.CardError as e:
 			  	print e
-			  	context['failure'] = False
+			  	context['failure'] = True
 			  	pass
+		else:
+			context['failure'] = True
+
 
 	return render(request, 'subscribe.html', context)

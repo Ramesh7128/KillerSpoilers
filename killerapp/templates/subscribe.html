@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" id="mainheading" href="#page-top">Spoiler Attacks</a>
+                <a class="navbar-brand page-scroll" id="mainheading" href="/#page-top">Spoiler Attacks</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,17 +92,21 @@
 				<strong>Success!</strong> Now sit back and relax while we do our work. Or you can go ahead and add another contact.
 				</div>
 				{% endif %}
-				{% if failure %}
+				{% if nodata %}
 				<div class="alert alert-warning fade in">
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				<strong>Warning!</strong> Your request dint process throgh, please try again.
+				<strong>Sorry!</strong> There was an error in transactions. Kindly
+				</div>
+				{% endif %}
+				{% if nodata %}
+				<div class="alert alert-warning fade in">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>Sorry!</strong> Your request dint process through, Kindly fill up the form before making the payment.
 				</div>
 				{% endif %}
             </div>
         </div>
     </div>
 {% endblock %}
-
-{% block footer %}
-    
-    {% endblock %}
+{% block footer %}    
+{% endblock %}

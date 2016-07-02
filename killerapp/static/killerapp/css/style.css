@@ -59,6 +59,11 @@ body, div, a {
    
 }
 
+.headingfont {
+   font-family: 'Bungee Shade', cursive;
+   font-size: 50px;  
+}
+
 
 /*subscribe css*/
 h1 {
