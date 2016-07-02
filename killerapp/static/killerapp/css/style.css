@@ -67,8 +67,13 @@ body, div, a {
 @media only screen and (max-device-width: 480px) {
    /*define mobile specific styles come here */
   #buttontext { 
-    margin: 5px; 
-  }
+    	margin: 5px; 
+  	}
+  #maintagline {
+
+		font-family: 'Ewert', cursive;
+		font-size: 40px;
+  	}
 }
 
 
