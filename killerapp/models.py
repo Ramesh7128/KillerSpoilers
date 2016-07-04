@@ -20,3 +20,16 @@ class SpoilerVictim(models.Model):
 			return "Anonymous"	
 
 
+class Suggestions(models.Model):
+
+	name = models.CharField(max_length=100, blank=False, null=False)
+	phone = models.CharField(max_length=100, blank=False, null=False)
+	email = models.EmailField(max_length=254, blank=False, null=False)
+	Suggestions = models.CharField(max_length=1000, blank=False, null=False)
+
+
+	def __unicode__(self):
+		if self.name and self.Suggestions:
+			return  self.name + " " + self.sugestions
+		else:
+			return "NONE" 

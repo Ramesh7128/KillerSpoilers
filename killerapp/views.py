@@ -7,9 +7,31 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from killerapp.models import *
 import stripe
+from django.http import HttpResponseRedirect, HttpResponse
 
+
+@csrf_exempt
 def homepage(request):
-	return render(request, 'index.html', {})
+	context = {}
+	if request.method =='POST':
+		name= request.POST.get('name')
+		phone = request.POST.get('phone')
+		email = request.POST.get('email')
+		suggestion = request.POST.get('suggestions')
+
+		if name and phone and email and suggestion:
+			suggestions = Suggestions()
+			suggestions.name = name
+			suggestions.phone = phone
+			suggestions.email = email
+			suggestions.suggestion = suggestion
+			suggestions.save()
+			return HttpResponse("success")
+		else:
+			context['error_form'] = True
+			return HttpResponse("error")
+
+	return render(request, 'index.html', context)
 
 def subscribe(request):
 	context = {}
@@ -39,7 +61,7 @@ def subscribe(request):
 			  	context['failure'] = True
 			  	pass
 		else:
-			context['failure'] = True
+			context['nodata'] = True
 
 
 	return render(request, 'subscribe.html', context)
