@@ -15,7 +15,6 @@ $(document).ready(function(){
 
     $("#suggestionsform").submit(function(event) {
     event.preventDefault();
-    alert("Test");
     var name = $("input#name").val();
     var email = $("input#email").val();
     var phone = $("input#phone").val();
@@ -36,7 +35,7 @@ $(document).ready(function(){
                     if (data == "success") {
 
                         $('#status_msg').html(
-                                '<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Thank you!</strong>.We shall make sure we will get the tv show u suggested, asap.</div>'
+                                '<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Thank you!</strong>.We shall make sure we will add the tv show u suggested, asap.</div>'
                          );
                         $("#suggestionsform")[0].reset();
                         
@@ -46,7 +45,7 @@ $(document).ready(function(){
                     } else {
 
                         $('#status_msg').html(
-                                '<div class="alert alert-warning fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Sorry!</strong> Your suggestion dint process through.Kindly do it again after some time</div>'
+                                '<div class="alert alert-warning fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Sorry!</strong> Your suggestion did not get submitted.Kindly do it again after some time</div>'
                             )
                         $("#suggestionsform")[0].reset();
                         console.log('error');
